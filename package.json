@@ -25,7 +25,8 @@
     }
   },
   "scripts": {
-    "dev": "concurrently -k \"cross-env BROWSER=none yarn vite:dev\" \"yarn electron\"",
+    "dev": "concurrently -k 'cross-env BROWSER=none yarn vite:dev' 'yarn electron'",
+    "test": "yarn build:for:electron && /usr/bin/electron16 ./electron/electron.js",
     "build": "yarn build:for:electron && yarn electron:builder",
     "vite:dev": "vite",
     "serve": "vite preview",
